@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admission Form</title>
+  <link rel="stylesheet" href="admission.css">
+</head>
+<body>
+  <img src="assets/img/student_PNG160-removebg-preview.png" alt="" srcset="">
+  <div class="admission-form-container">
+   
+    <h2>Admission Form</h2>
+    <form id="admission-form" method="POST" name="google-sheet">
+      <div class="input-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="input-group">
+        <label for="course">Course of Interest</label>
+        <select id="course" name="course">
+          <option value="computer-science">Computer Science</option>
+          <option value="biology">Biology</option>
+          <option value="engineering">Engineering</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="message">Additional Information</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzaoL2SRS9pEkxY64SG7GZ2OC7sRZp1aPwH4e-Wfs9Lj-UVUvNGUU7_J3HIlyykuOVT/exec'
+    const form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

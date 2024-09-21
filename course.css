@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+
+  
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.canva.com/design/DAF5T1070g4/knuqqAKnnjUGy1zIGjNAwQ/view?utm_content=DAF5T1070g4&utm_campaign=designshare&utm_medium=link&utm_source=editor");
+  background-color: white;
+}
+  
+#nav{
+  width: 100%;
+  height: 10%;
+  background-color: lightseagreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page4 {
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 75px;
+  position: relative;
+  margin: 2vw 2vw;
+
+}
+.par p{
+  text-align: start;
+}
+.ben{
+  display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+.elem {
+  height: 100%;
+  width: 26%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  margin: 0 10vw;
+}
+
+.elem h2 {
+  height: 100%;
+  width: 100%;
+  background-color: aqua; 
+  display: flex;
+  color: #000;
+  font-weight: 800;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+  font-size: 2vw;
+  position: absolute;
+  z-index: 10;
+}
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+.elem:hover h2 {
+  color: #fff;
+  background-color: transparent;
+}
+.elem:hover img {
+  scale: 1;
+}
+#page4 h1 {
+  font-size: 6.4vw;
+  position: absolute;
+  top: -15%;
+  font-weight: 900;
+  font-family: gilroy;
+  color: #000;
+  -webkit-text-stroke: 2px #fff;
+}
+
+@media only screen and (max-width : 480px){
+  html,body{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      
+  }
+  .elem img{
+    flex-direction: column;
+  }
+}
